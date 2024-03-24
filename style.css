@@ -1,0 +1,130 @@
+body {
+    background-color: #000000;
+    overflow: hidden;
+   
+}
+
+.navbar {
+    position: fixed; /* Ensures the navbar stays fixed on the screen */
+    top: 0; /* Positions the navbar at the top of the screen */
+    width: 100%; /* Makes the navbar span the entire width of the screen */
+    background: linear-gradient(-233deg, #000 40%, rgba(0, 0, 0, 0) 65%) no-repeat;
+    z-index: 999; /* Ensures the navbar appears above other content */
+    width: 20px;    
+}
+
+.navbar ul{
+    display: flex;
+}
+.navbar ul li{
+    list-style-type: none;
+}
+.navbar ul li {
+    text-decoration: none;
+    font-weight: 500;
+    font-family: "Rubik";
+    color: #fff;padding-bottom: 15px;
+    margin: 0 25px;
+}
+.navbar ul li .link{
+    text-decoration: none;
+    font-weight: 500;
+    color: #fff;padding-bottom: 15px;
+    margin: 0 25px;
+}
+.link:hover, .active{
+    border-bottom: 2px solid #fff
+}
+
+main::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    width: 80vw;
+    /*background: linear-gradient(-233deg, #000 40%, rgba(0, 0, 0, 0) 65%) no-repeat;*/
+}
+
+main.personagens .personagem {
+    display: none;
+    height: 100vh;
+}
+
+main.personagens .personagem.selecionado {
+    display: block;
+}
+
+main .personagem .imagem {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.conteudo {
+    position: absolute;
+    top: 0;
+    left: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    max-width: 380px;
+    z-index: 1;
+}
+
+.conteudo .nome-personagem{
+    
+    color: #ffffff;
+    font-size: 48px;
+    font-family: "Secular One";
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.conteudo .descricao{
+    
+    color: #ffffff;
+    font-family: "Rubik";
+    font-size: 16px;
+    line-height: 24px;
+}
+
+/*.conteudo .logo {
+    background-image: url();
+    background-size: cover;
+    width: 230px;
+    height: 100px;
+    margin-bottom: 25px;
+}*/
+
+.botoes {
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 180px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.botoes .botao {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.botoes .botao img{
+    border-radius: 70%;
+}
+
+.botoes .botao .selecionado{
+    transform: scale(1.2);
+    box-shadow: 0 0 10px #D9D9D9;
+    border-radius: 80%;
+
+}
